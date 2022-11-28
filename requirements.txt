@@ -1,1 +1,4 @@
 cufflinks
+pandas
+streamlit
+numpy
