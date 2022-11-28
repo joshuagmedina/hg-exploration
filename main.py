@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-#import cufflinks
+import cufflinks
 
 st.set_page_config(layout="wide")
 
