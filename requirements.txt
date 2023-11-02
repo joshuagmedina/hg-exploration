@@ -2,3 +2,5 @@ cufflinks
 pandas
 streamlit
 numpy
+biopython
+requests
