@@ -9,6 +9,14 @@ st.set_page_config(
     page_title = "DevNeuro Lab"
 )
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 # Dropbox URLs for FASTA files
 fasta_urls = {
     "Intestine Transcriptome": "https://www.dropbox.com/scl/fi/m7e94xr6e8yf7z3ol126v/cuke2022.trinity.Trinity.fasta?rlkey=3v2p04r7oaiagu9aj8gxl16x8&dl=1",
@@ -36,7 +44,7 @@ def load_fasta(fasta_stream):
     return SeqIO.to_dict(SeqIO.parse(fasta_stream, "fasta"))
 
 def main():
-    st.title("FASTA File Sequence Search from Dropbox URLs")
+    st.title("Dev Neuro Lab: FASTA File Sequence Search")
 
     # Dropdown to select FASTA file
     selected_fasta_label = st.selectbox("Select a FASTA file:", list(fasta_urls.keys()))
